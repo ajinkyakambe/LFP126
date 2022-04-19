@@ -26,8 +26,8 @@ public class UC3_ValidMail {
         String eMail = input.nextLine();
         Pattern pattern = Pattern.compile(emailRegexPattern);
         Matcher matcher = pattern.matcher(eMail);
-        boolean retrurn = matcher.matches();
-        if (retrurn) {
+        boolean result = matcher.matches();
+        if (result) {
             System.out.println("Mail ID is Valid");
         } else {
             System.out.println("Mail ID is Invalid");
