@@ -14,7 +14,7 @@ public class UserRegMain {
         int choice;
 
         do {
-            System.out.println("1.To Validate First Name \n2.To Validate Last Name");
+            System.out.println("1.To Validate First Name \n2.To Validate Last Name \n3.To Validate Mail");
             choice = input.nextInt();
             switch (choice) {
                 case 1:  // Uc1
@@ -22,16 +22,22 @@ public class UserRegMain {
                 UC1_UserValidateFirstName.validateFirstName();
                 System.out.println("===============================");
                     break;
-                case 2:  // Uc1
+                case 2:  // Uc2
                 System.out.println("===============================");
                 UC2_ValidateUserLastName.validateLastName();
+                System.out.println("===============================");
+                    break;
+                case 3:  // Uc3
+                System.out.println("===============================");
+                UC3_ValidMail.validateMail();
                 System.out.println("===============================");
                     break;
                 
                 
             }
         }
-        while (choice != 3);
+        while (choice != 4);
     }
 }
+
 
