@@ -5,7 +5,7 @@
     let pin = 400088;
     let regex = RegExp('[1-9][0-9]{5}');
     let result = regex.test(pin);
-    console.log(result);
+    console.log("Result for pin ",pin,"=",result);
 }
 /**
  * UC 2: Restrict the pin code from taking alphabets or special characters at beginning
@@ -16,7 +16,7 @@
     // Beginning should contain only digits from 1 to 9
     let regex = RegExp('^[1-9][0-9]{5}');
     let result = regex.test(pin);
-    console.log(result);    // returns false
+    console.log("Result for pin ",pin,"=",result);    // returns false
 }
 
 /**
@@ -28,7 +28,7 @@
     // End should contain only digits from 1 to 9, cannot contain any alphabets or special characters
     let regex = RegExp('[1-9][0-9]{4}[0-9]$');
     let result = regex.test(pin);
-    console.log(result);    // returns false
+    console.log("Result for pin ",pin,"=",result);    // returns false
 }
 
 /**

@@ -1,5 +1,14 @@
 /**
- * UC 1: Email Validation: Make sure at least three characters are present 
+ * UC 1:Validate Email address with a
+regex. The email consists of
+minimum 3 and optional 2 more
+parts with mandatory @ and .
+abc.xyz@bridgelabz.co.in
+Here abc, bridgelabz and co are
+mandatory and the remaining 2
+are optional
+To begin with lets validate the
+mandatory part and start with abc 
  */
  {
     let valid_email_id ="abc";
@@ -16,7 +25,9 @@
 }
 
 /**
- * UC 2: Email validation: Make sure @ symbol and gmail after that is present
+ * UC 2: Ensure @ and validate the
+mandatory 2nd part i.e.
+bridgelabz
  */
  {
     let valid_email_id ="abc@gmail";
@@ -36,7 +47,9 @@
 }
 
 /**
- * UC 3: Email validation: Make sure . and com after gmail are there
+ * UC 3: Ensure “.” after bridgelabz
+and validate the
+mandatory 3rd part i.e. co
  */
  {
     let valid_email_id ="abc@gmail.com";
@@ -56,8 +69,14 @@
 }
 
 /**
- * UC 4: Email validation: There may be a certain special character(+-.-) before @ but alphanumeric characters must separate 
- *                          it from @ symbol
+ * UC 4: Lets handle optional part
+i.e. xyz in
+abc.xyz@bridgelabz.co.in
+NOTE: make sure only
+following are valid special
+characters _,+,
+-,.
+proceeding to xyz
  */
  {
     let valid_email_id ="abc.xyz@gmail.com";
