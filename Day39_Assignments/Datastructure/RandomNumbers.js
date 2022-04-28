@@ -1,8 +1,8 @@
-console.log("Generating 5 random numbers:");
+console.log("Generating 10 random numbers:");
 var min = 100;
 var max = 999;
 var array = [];
-for(var i = 0; i< 5;i++){
+for(var i = 0; i< 10;i++){
     var number = Math.floor(Math.random() * (max - min + 1) + min);
     array.push(number);
 }
