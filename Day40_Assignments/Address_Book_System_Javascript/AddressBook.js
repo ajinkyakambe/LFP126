@@ -1,8 +1,12 @@
 console.log("Good Morning!");
-console.log("Today we shall work on Address Book System using Node JS.");   
+console.log("Today we shall work on Address Book System using JS.");   
 
 /**
- * UC 1: Create an address book contact with first name,last name,address, city,state,zip , phone number and email id 
+ * UC 1:
+ Ability to create a Address Book
+Contact with first and last names,
+address, city, state, zip, phone number
+and email...
  * 
  * @return: A map containing above contact details
  * 
@@ -29,14 +33,17 @@ console.log("Today we shall work on Address Book System using Node JS.");
 
 
 /**
- * UC 2: Ensure valid contacts are added; 
- *      
- *  first name and last name should start with capital and should have minimum three characters
- * Address, city and state should have minimum 4 characters
- * zip- total 6 digits, special characters not allowed at beginning or end, mid whitespace allowed
- * phone number- special characters not allowed at beginning or end, total 10 digits with mid whitespace allowed
- * email id- minimum 3 characters before @, gmail.com after@ and optional 2 character of tld after .com
- * 
+ * UC 2: Ability to ensure Valid
+Contacts are added... 
+
+-First Name and Last Name should start with
+Capital and Minimum 3 Characters
+- Address, City and State should also have
+minimum 4 characters
+- Zip, Phone and Email should be valid as done in
+the Pattern Exercise
+- Throw Error if the RegEx test fails
+
  * @return: A map containing contact details if contact validated properly, else if contact validation fails then throws error
  * 
  * @param: first_name,last name,address, city,state,zip , phone num and emailId
@@ -135,11 +142,12 @@ console.log("Today we shall work on Address Book System using Node JS.");
     return contact;
 }
 
-// call the function to create an address book contact
-//console.log(createValidatedContact("Altaf","Hussain","Wellington street","wellington","new zealandnd",458538,9801234567,"altaf.hussain@gmail.com"));
 
 /**
- * UC 3: Create a new address book array and add new contacts to it 
+ * UC 3: Ability to create a
+New Address Book
+array and add new
+Contacts to it.
  * 
  * @return: An array (addressbook) containing contacts
  * 
@@ -158,7 +166,10 @@ console.log("Today we shall work on Address Book System using Node JS.");
 
 
 /**
- * UC 4 : Find existing contact person using their name and edit it
+ * UC 4 : Ability to find
+existing contact
+person using their
+name and edit it
  * 
  * @return: An array (addressbook after modification) containing contacts
  * 
@@ -188,12 +199,15 @@ console.log("Today we shall work on Address Book System using Node JS.");
     return addressbook;
 }
 
-let contact_new = createValidatedContact("Altaf","Hussain","Iqbal street","Kohima","nagaland",458538,9801234567,"altaf.hussain@gmail.com");
+let contact_new = createValidatedContact("ajinkya","kambe","kokanwadi street","murtizapur","maharashtra",458538,9801234567,"ajinkya.kambe@gmail.com");
 
 
 
 /**
- * UC 5 : Find a person with name and delete it from array
+ * UC 5 : Ability to find a
+person with name
+delete it from the
+array
  * 
  * @return: An array (addressbook after modification) containing contacts
  * 
@@ -215,17 +229,20 @@ let contact_new = createValidatedContact("Altaf","Hussain","Iqbal street","Kohim
     // Returns an array after deletion of above contact
     return addressbook;
 }
-let contact3 = createValidatedContact("Altaf","Hussain","Wellington street","wellington","newzealand",458538,9801234567,"altaf.hussain@gmail.com");
-let contact4 = createValidatedContact("Ashok","Kumaratunga","Middleton street","Jaipur","rajasthan",458538,9801234567,"ashok.kumaratunga@gmail.com");
+let contact3 = createValidatedContact("ajinkya","kambe","Wellington street","wellington","newzealand",458538,9801234567,"ajinkya.kambe@gmail.com");
+let contact4 = createValidatedContact("aditya","Kumaratunga","Middleton street","Jaipur","rajasthan",458538,9801234567,"aditya.kumaratunga@gmail.com");
 // create an addressbook containing above contacts
 let addressBook = createAddressBook(contact3,contact4);
 // Delete the existing contact based on name
-let first_name = "Altaf";
-let last_name = "Hussain";
+let first_name = "Ajinkya";
+let last_name = "Kambe";
 
 
 /**
- * UC 6 : Find the number of contacts inside addressbook 
+ * UC 6 : Ability to find
+number of contacts
+in the address book
+
  * 
  * @return: int value (number of contacts inside addressbook)
  * 
@@ -242,9 +259,9 @@ let last_name = "Hussain";
     return contacts_no;
 }
 
-let contact11 = createValidatedContact("Altaf","Hussain","Wellington street","wellington","newzealand",458538,9801234567,"altaf.hussain@gmail.com");
-let contact12 = createValidatedContact("Ashok","Kumaratunga","Middleton street","Jaipur","rajasthan",458538,9801234567,"ashok.kumaratunga@gmail.com");
-let contact14 = createValidatedContact("Asim","Singh","Iqbal street","Kohima","nagaland",458538,9801234567,"altaf.hussain@gmail.com");
+let contact11 = createValidatedContact("ajinkya","kambe","Wellington street","wellington","newzealand",458538,9801234567,"ajinkya.kambe@gmail.com");
+let contact12 = createValidatedContact("aditya","Kumaratunga","Middleton street","Jaipur","rajasthan",458538,9801234567,"aditya.kumaratunga@gmail.com");
+let contact14 = createValidatedContact("nehal","Singh","kokanwadi street","murtizapur","maharashtra",458538,9801234567,"ajinkya.kambe@gmail.com");
 
 // create an addressbook containing above contacts
 let addressBook1 = createAddressBook(contact11,contact12,contact14);
@@ -252,7 +269,9 @@ let addressBook1 = createAddressBook(contact11,contact12,contact14);
 
 
 /**
- * UC 7 : Ensure no duplicate entry of the same person in the addressbook 
+ * UC 7 : Ability to ensure there is no
+Duplicate Entry of the same
+Person in the Address Book
  * 
  * @return: boolean value (true if person name already exists in address book, false otherwise)
  * 
@@ -269,20 +288,22 @@ let addressBook1 = createAddressBook(contact11,contact12,contact14);
     return contactAlreadyPresent;
 }
 
-let contact21 = createValidatedContact("Altaf","Hussain","Wellington street","wellington","newzealand",458538,9801234567,"altaf.hussain@gmail.com");
-let contact22 = createValidatedContact("Ashok","Kumaratunga","Middleton street","Jaipur","rajasthan",458538,9801234567,"ashok.kumaratunga@gmail.com");
-let contact23 = createValidatedContact("Asim","Singh","Iqbal street","Kohima","nagaland",458538,9801234567,"altaf.hussain@gmail.com");
+let contact21 = createValidatedContact("ajinkya","kambe","Wellington street","wellington","newzealand",458538,9801234567,"ajinkya.kambe@gmail.com");
+let contact22 = createValidatedContact("aditya","Kumaratunga","Middleton street","Jaipur","rajasthan",458538,9801234567,"aditya.kumaratunga@gmail.com");
+let contact23 = createValidatedContact("nehal","Singh","kokanwadi street","murtizapur","maharashtra",458538,9801234567,"ajinkya.kambe@gmail.com");
 // create an addressbook containing above contacts
 let addressBook2 = createAddressBook(contact21,contact22,contact23);
 
-let contact25 = createValidatedContact("Asim","Singh","Iqbal street","Kohima","nagaland",458538,9801234567,"altaf.hussain@gmail.com");
+let contact25 = createValidatedContact("nehal","Singh","kokanwadi street","murtizapur","maharashtra",458538,9801234567,"ajinkya.kambe@gmail.com");
 
 let contactAlreadyPresent = preventDuplicateEntry(addressBook2,contact25);
 
 
 
 /**
- * UC 8 : Search a person in a particular city or state
+ * UC 8 : Ability to search
+Person in a particular
+City or State - Use Array Functions of filter,
  * 
  * @return: contact of the person being searched or null
  * 
@@ -306,15 +327,15 @@ let contactAlreadyPresent = preventDuplicateEntry(addressBook2,contact25);
     return contactDetails;
 }
 
-let contact31 = createValidatedContact("Altaf","Hussain","Wellington street","mysore","newzealand",458538,9801234567,"altaf.hussain@gmail.com");
-let contact32 = createValidatedContact("Ashok","Kumaratunga","Middleton street","Jaipur","rajasthan",458538,9801234567,"ashok.kumaratunga@gmail.com");
-let contact34 = createValidatedContact("Asim","Singh","Iqbal street","mysore","karnataka",458538,9801234567,"asim.singh@gmail.com");
+let contact31 = createValidatedContact("ajinkya","kambe","Wellington street","mysore","newzealand",458538,9801234567,"ajinkya.kambe@gmail.com");
+let contact32 = createValidatedContact("aditya","Kumaratunga","Middleton street","Jaipur","rajasthan",458538,9801234567,"aditya.kumaratunga@gmail.com");
+let contact34 = createValidatedContact("nehal","Singh","kokanwadi street","mysore","karnataka",458538,9801234567,"nehal.singh@gmail.com");
 let contact35 = createValidatedContact("Aman","Singh","Konark street","mysore","karnataka",490538,9805432167,"aman.singh@gmail.com");
 
 // create an addressbook containing above contacts
 let addressBook3 = createAddressBook(contact31,contact32,contact34,contact35);
 
-let contactDetails = searchPersonInCityOrState(addressBook3,false,"karnataka","Asim","Singh");
+let contactDetails = searchPersonInCityOrState(addressBook3,false,"karnataka","nehal","Singh");
 
 // Display the contact details if present in a particular city or state
 if(contactDetails.length == 0){
@@ -326,7 +347,9 @@ if(contactDetails.length == 0){
 
 
 /**
- * UC 9 : View all persons in a particular city or state
+ * UC 9 : Ability to view
+Persons by City or
+State - Use Array
  * 
  * @return: Arraylist containing contacts
  * 
@@ -359,9 +382,9 @@ if(contactDetails.length == 0){
     return contactDetails;
 }
 
-let contact41 = createValidatedContact("Altaf","Hussain","Wellington street","mysore","karnataka",458538,9801234567,"altaf.hussain@gmail.com");
-let contact43 = createValidatedContact("Ashok","Kumaratunga","Middleton street","kollam","kerala",458538,9801234567,"ashok.kumaratunga@gmail.com");
-let contact44 = createValidatedContact("Asim","Singh","Iqbal street","mysore","karnataka",458538,9801234567,"asim.singh@gmail.com");
+let contact41 = createValidatedContact("ajinkya","kambe","Wellington street","mysore","karnataka",458538,9801234567,"ajinkya.kambe@gmail.com");
+let contact43 = createValidatedContact("aditya","Kumaratunga","Middleton street","kollam","kerala",458538,9801234567,"aditya.kumaratunga@gmail.com");
+let contact44 = createValidatedContact("nehal","Singh","kokanwadi street","mysore","karnataka",458538,9801234567,"nehal.singh@gmail.com");
 let contact45 = createValidatedContact("Aman","Singh","Konark street","kochi","kerala",490538,9805432167,"aman.singh@gmail.com");
 
 // create an addressbook containing above contacts
@@ -378,7 +401,9 @@ if(contactDetls != null){
 
 
 /**
- * UC 10 : Count number of persons in a particular city or state
+ * UC 10 : Ability to get number
+of contact persons i.e.
+count by City or State
  * 
  * @return: number (count of persons in a city or state)
  * 
@@ -404,9 +429,9 @@ if(contactDetls != null){
     return contactNums;
 }
 
-let contact52 = createValidatedContact("Altaf","Hussain","Wellington street","mysore","karnataka",458538,9801234567,"altaf.hussain@gmail.com");
-let contact53 = createValidatedContact("Ashok","Kumaratunga","Middleton street","kollam","kerala",458538,9801234567,"ashok.kumaratunga@gmail.com");
-let contact54 = createValidatedContact("Asim","Singh","Iqbal street","mysore","karnataka",458538,9801234567,"asim.singh@gmail.com");
+let contact52 = createValidatedContact("ajinkya","kambe","Wellington street","mysore","karnataka",458538,9801234567,"ajinkya.kambe@gmail.com");
+let contact53 = createValidatedContact("aditya","Kumaratunga","Middleton street","kollam","kerala",458538,9801234567,"aditya.kumaratunga@gmail.com");
+let contact54 = createValidatedContact("nehal","Singh","kokanwadi street","mysore","karnataka",458538,9801234567,"nehal.singh@gmail.com");
 let contact55 = createValidatedContact("Aman","Singh","Konark street","kochi","kerala",490538,9805432167,"aman.singh@gmail.com");
 
 // create an addressbook containing above contacts
