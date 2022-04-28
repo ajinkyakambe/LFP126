@@ -30,12 +30,12 @@ mandatory 2nd part i.e.
 bridgelabz
  */
  {
-    let valid_email_id ="abc@gmail";
+    let valid_email_id ="abc@bridgelabz";
     let invalid_email_id1  = "abcgoogle";
     let invalid_email_id2 = "abc@xyz";
 
     // Atleast three characters should be present
-    let regex = RegExp("[a-zA-Z0-9]{3,}[@]{1}[g][m][a][i][l]");
+    let regex = RegExp("[a-zA-Z0-9]{3,}[@]{1}[b][r][i][d][g][e][l][a][b][z]");
 
     let result_valid_email_id = regex.test(valid_email_id);
     let result_invalid_email_id1 = regex.test(invalid_email_id1);
@@ -52,12 +52,12 @@ and validate the
 mandatory 3rd part i.e. co
  */
  {
-    let valid_email_id ="abc@gmail.com";
-    let invalid_email_id1  = "abc@gmail.co";
-    let invalid_email_id2 = "abc@gmailcom";
+    let valid_email_id ="abc@bridgelabz.com";
+    let invalid_email_id1  = "abc@bridgelabz.co";
+    let invalid_email_id2 = "abc@bridgelabzcom";
 
     // Atleast three characters should be present
-    let regex = RegExp("[a-zA-Z0-9]{3,}[@]{1}[g][m][a][i][l][.][c][o][m]");
+    let regex = RegExp("[a-zA-Z0-9]{3,}[@]{1}[b][r][i][d][g][e][l][a][b][z][.][c][o][m]");
 
     let result_valid_email_id = regex.test(valid_email_id);
     let result_invalid_email_id1 = regex.test(invalid_email_id1);
@@ -79,12 +79,12 @@ characters _,+,
 proceeding to xyz
  */
  {
-    let valid_email_id ="abc.xyz@gmail.com";
-    let invalid_email_id1  = "abc.@gmail.com";  // No alphanumeric character after dot
-    let invalid_email_id2 = "abc&@gmail.com";   // Ampersand not an allowed special character
+    let valid_email_id ="abc.xyz@bridgelabz.com";
+    let invalid_email_id1  = "abc.@bridgelabz.com";  // No alphanumeric character after dot
+    let invalid_email_id2 = "abc&@bridgelabz.com";   // Ampersand not an allowed special character
 
     // Atleast three characters should be present
-    let regex = RegExp("([a-zA-Z0-9]{3,}|[a-zA-Z0-9]{3,}[+_.-]?[a-zA-Z0-9]{1,})[@]{1}[g][m][a][i][l][.][c][o][m]");
+    let regex = RegExp("([a-zA-Z0-9]{3,}|[a-zA-Z0-9]{3,}[+_.-]?[a-zA-Z0-9]{1,})[@]{1}[b][r][i][d][g][e][l][a][b][z][.][c][o][m]");
 
     let result_valid_email_id = regex.test(valid_email_id);
     let result_invalid_email_id1 = regex.test(invalid_email_id1);
