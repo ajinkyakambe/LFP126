@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="../css/AddrBookForm.css" rel="stylesheet">
+    <title>Address Book Form Page</title>
+</head>
+<body>
+    <!-- UC1 -->
+    <header class="header-content header">
+        <div class="logo-content">
+            <a href="AddrBookHomePage.html" >
+                <img class="image" src="../icon/AddrBookIcon.png" alt="">
+            </a>
+            <div>
+                <span class="book-text">ADDRESS</span><br>
+                <span class="book-text address-book">BOOK</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- UC2 -->
+    <div class="form-content">
+        <div class="form-dev">
+            <div class="form-head" >
+                <div class="form-title">
+                    PERSON ADDRESS FORM
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill close-icon" viewBox="0 0 16 16" onclick="onCancel()">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                        </svg>
+                </div>            
+            </div>
+    <!-- UC3 -->
+            <form class="form" id="addressBook" action="#" >
+                <div class="row-content">
+                    
+                    <input class="input" type="text" id="fullName" name="name" placeholder="FullName" required>
+                </div>
+                <div class="row-content">
+                   
+                    <input class="input" type="text" id="address" name="address" placeholder="Address" required>
+                </div>
+                <div class="row-content">
+                   
+                    <div>
+                        <select class="form-select" id="city" name="city" >
+                            <option value="">Select City</option>
+                            <option value="Banglore">Banglore</option>
+                            <option value="Calicut">Calicut</option>
+                            <option value="Kannur">Kannur</option>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Hyderabad">Hyderabad</option>
+                            <option value="Pune">Pune</option>
+                        </select>
+                    </div>
+                  
+                    <div>
+                        <select class="form-select" id="state" name="state" >
+                            <option value="">Select State</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="TamilNadu">TamilNadu</option>
+                            <option value="AndhraPradesh">AndhraPradesh</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <select class="form-select" id="zip" name="zip" >
+                            <option value="">Select Zip</option>
+                            <option value="673594">673594</option>
+                            <option value="689090">689090</option>
+                            <option value="290832">290832</option>
+                            <option value="101029">101029</option>
+                            <option value="284763">284763</option>
+                            <option value="374890">374890</option>
+                        </select>
+                    </div>
+
+                </div>
+
+            
+
+                <div class="row-content">
+                    
+                    <input class="input" type="text" id="phno" name="phno" placeholder="Phone number" required>
+                    <input type="hidden" id="addrId" value="">
+                </div>
+            <!-- UC5 -->
+                <div class="submit-reset">
+                    <button type="button" id="submitButton" class="btn btn-success" onClick="onSubmit()" >Submit</button>
+                    <button type="reset" onClick="formReset()" class="btn btn-warning" onClick="formReset()">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- UC4 -->
+    <script src="../js/httpService.js"></script>
+    <script src="../js/AddrBookForm.js"></script>
+</body>
+</html>

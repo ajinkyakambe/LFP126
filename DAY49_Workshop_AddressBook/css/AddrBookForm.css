@@ -1,0 +1,143 @@
+
+body{
+    margin: 0;
+    height: 100%;
+}
+
+.header{
+    padding: 15px 0;
+    background-color: #ffffff;
+}
+
+.header-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid green;
+}
+
+.logo-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 0px solid green;
+    width: 63%;
+}    
+
+.logo-content-img{
+    border: solid 0px #42515f;
+}
+
+.book-text{
+    font: normal normal bold 20px/25px Montserrat;
+    font-family: "Montserrat";
+    letter-spacing: 0px;
+    color: red;
+    text-transform: capitalize;
+}
+
+.address-book{
+    color:black;
+}
+*{box-sizing: border-box;}
+
+
+.form-content{
+    min-height: calc(100% - 80px);
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid green;
+}
+
+.form-dev{
+    width: 55%;
+    background: #ffffff;
+    border-radius: 8px;
+    opacity: 1;
+}
+
+.form{
+    padding: 44px 60px;
+}
+
+.form-head{
+    font: normal normal 16px/37px Roboto;
+    letter-spacing: 0px;
+    color: #e7e7ef;
+    text-transform: capitalize;
+    opacity: 1;
+    background-color: royalblue;
+	padding: 2%;
+}
+
+.image{
+    width: 48px;
+}
+
+.form-title{
+    text-align: center;
+}
+.close-icon{
+    float: right;
+    margin-right: 3%;
+    margin-top: 1%;
+}
+
+
+.row-content{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    align-items: center;
+    border: 0px solid green;
+justify-content: space-between;
+}
+
+.input{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.label{
+    min-width: 140px;
+}
+
+.state-label {
+    padding-left: 37px;
+    min-width: 140px;
+}
+
+label{
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+.text{
+    font-size: 16px;
+    color: #42515f;
+    opacity: 1;
+    font-family: Roboto;
+}
+
+
+.submit-reset{
+    float: right;
+}
+
+.btn-success {
+  color: #1e1d1d;
+  background-color: #e2e2e2;
+  border-color: #e2e2e2;
+}
+
+.btn-warning {
+  color: #1e1d1d;
+  background-color: #e2e2e2;
+  border-color: #e2e2e2;
+}
